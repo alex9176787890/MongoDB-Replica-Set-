@@ -19,6 +19,8 @@ export DOCKER_HOST="tcp://192.168.99.100:2376"
 export DOCKER_CERT_PATH="/Users/developer/.docker/machine/machines/manager1"  
 export DOCKER_MACHINE_NAME="manager1"  
 
+3. Create the two docker-machines as worker
+
 ````
 docker-machine create -d virtualbox worker1
 docker-machine create -d virtualbox worker2
@@ -47,6 +49,10 @@ manager1   -        virtualbox   Running   tcp://192.168.99.100:2376           v
 worker1    -        virtualbox   Running   tcp://192.168.99.101:2376           v18.09.6   
 worker2    -        virtualbox   Running   tcp://192.168.99.102:2376           v18.09.6  
 
+Attached our volume created to start our first mongo container and set the configurations.  
+
+4. Configuration of master node of MongoDB
+
 ````
 docker volume create --name mongo_storage
 ````
@@ -57,4 +63,5 @@ docker run --name mongoNode1 \
 > -d mongo \
 > --smallfiles
 ````
-
+5. Create the key file.
+The content of the keyfile must be the same for all members of the replica set.
