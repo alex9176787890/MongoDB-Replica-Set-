@@ -65,3 +65,9 @@ docker run --name mongoNode1 \
 ````
 5. Create the key file.
 The content of the keyfile must be the same for all members of the replica set.
+
+````
+openssl rand -base64 741 > mongo-keyfile
+chmod 600 mongo-keyfile
+````
+
