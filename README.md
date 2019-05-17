@@ -47,3 +47,14 @@ manager1   -        virtualbox   Running   tcp://192.168.99.100:2376           v
 worker1    -        virtualbox   Running   tcp://192.168.99.101:2376           v18.09.6   
 worker2    -        virtualbox   Running   tcp://192.168.99.102:2376           v18.09.6  
 
+````
+docker volume create --name mongo_storage
+````
+
+````
+docker run --name mongoNode1 \
+> -v mongo_storage:/data \
+> -d mongo \
+> --smallfiles
+````
+
