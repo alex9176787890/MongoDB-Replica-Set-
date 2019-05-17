@@ -1,9 +1,9 @@
 # MongoDB-Replica-Set-
 Deploy a MongoDB Replica Set using Docker
 
-## Install virtualbox on Mac
+1. Install virtualbox on Mac
 
-## Create a machine called manager1 using virtualbox as the virtualization provider
+2. Create a machine called manager1 using virtualbox as the virtualization provider
 
 ````
 docker-machine create -d virtualbox manager1
