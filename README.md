@@ -23,3 +23,18 @@ export DOCKER_MACHINE_NAME="manager1"
 docker-machine create -d virtualbox worker1
 docker-machine create -d virtualbox worker2
 ````
+````
+docker-machine env worker1
+````
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.101:2376"
+export DOCKER_CERT_PATH="/Users/developer/.docker/machine/machines/worker1"
+export DOCKER_MACHINE_NAME="worker1"
+````
+docker-machine env worker2
+````
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.102:2376"
+export DOCKER_CERT_PATH="/Users/developer/.docker/machine/machines/worker2"
+export DOCKER_MACHINE_NAME="worker2"
+
