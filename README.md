@@ -244,7 +244,10 @@ MongoDB server version: 4.0.9
 Repeat almost all the steps made for mongoNode1, let’s make a script that runs all of our commands for us.
 
 17. Create a file called create-replica-set.sh  
-Execute the script that will configure everything for us.
+Execute the script that will configure everything for us except creating three docker-machine
 ````
 bash < create-replica-set.sh
 ````
+
+18. Remvoing all containers and docker volume from docke-machine
+reset-docker-machines.sh
