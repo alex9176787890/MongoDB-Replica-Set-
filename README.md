@@ -132,21 +132,21 @@ docker run --name mongoNode1 --hostname mongoNode1 \
 ````
 docker exec mongoNode1 bash -c 'mongo < /data/admin/replica.js'
 ````
-MongoDB shell version v4.0.9
-connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
-Implicit session: session { "id" : UUID("508f507e-5f28-4395-88c6-d5a1b54faa7a") }
-MongoDB server version: 4.0.9
-{ "ok" : 1 }
-bye
+MongoDB shell version v4.0.9  
+connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb  
+Implicit session: session { "id" : UUID("508f507e-5f28-4395-88c6-d5a1b54faa7a") }  
+MongoDB server version: 4.0.9  
+{ "ok" : 1 }  
+bye  
 
 15. Create the admin users with the following command
 ````
 docker exec mongoNode1 bash -c 'mongo < /data/admin/admin.js'
 ````
-MongoDB shell version v4.0.9connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
-Implicit session: session { "id" : UUID("1572d671-6595-4e7f-995e-16f93287a8ee") }
-MongoDB server version: 4.0.9
-admin
+MongoDB shell version v4.0.9connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb  
+Implicit session: session { "id" : UUID("1572d671-6595-4e7f-995e-16f93287a8ee") }  
+MongoDB server version: 4.0.9  
+admin  
 Successfully added user: {  
         "user" : "admin",  
         "roles" : [  
