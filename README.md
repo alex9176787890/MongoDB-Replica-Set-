@@ -238,3 +238,13 @@ MongoDB server version: 4.0.9
                 }
         }
 }
+
+## Adding 2 more mongo node containers
+
+Repeat almost all the steps made for mongoNode1, let’s make a script that runs all of our commands for us.
+
+17. Create a file called create-replica-set.sh  
+Execute the script that will configure everything for us.
+````
+bash < create-replica-set.sh
+````
