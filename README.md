@@ -167,3 +167,74 @@ Successfully added user: {
         ]  
 }  
 bye  
+
+16.  Get in to the replica run the following command:
+````
+docker exec -it mongoNode1 bash -c 'mongo -u $MONGO_REPLICA_ADMIN -p $MONGO_PASS_REPLICA --eval "rs.status()" --authenticationDatabase "admin"'
+````
+MongoDB shell version v4.0.9
+connecting to: mongodb://127.0.0.1:27017/?authSource=admin&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("f72f3fc1-cd93-4d3f-b061-ce38d9d1c19d") }
+MongoDB server version: 4.0.9
+{
+        "set" : "rs1",
+        "date" : ISODate("2019-05-18T01:29:24.448Z"),
+        "myState" : 1,
+        "term" : NumberLong(1),
+        "syncingTo" : "",
+        "syncSourceHost" : "",
+        "syncSourceId" : -1,
+        "heartbeatIntervalMillis" : NumberLong(2000),
+        "optimes" : {
+                "lastCommittedOpTime" : {
+                        "ts" : Timestamp(1558142954, 1),
+                        "t" : NumberLong(1)
+                },
+                "readConcernMajorityOpTime" : {
+                        "ts" : Timestamp(1558142954, 1),
+                        "t" : NumberLong(1)
+                },
+                "appliedOpTime" : {
+                        "ts" : Timestamp(1558142954, 1),
+                        "t" : NumberLong(1)
+                },
+                "durableOpTime" : {
+                        "ts" : Timestamp(1558142954, 1),
+                        "t" : NumberLong(1)
+                }
+        },
+        "lastStableCheckpointTimestamp" : Timestamp(1558142944, 1),
+        "members" : [
+                {
+                        "_id" : 0,
+                        "name" : "manager1:27017",
+                        "health" : 1,
+                        "state" : 1,
+                        "stateStr" : "PRIMARY",
+                        "uptime" : 502,
+                        "optime" : {
+                                "ts" : Timestamp(1558142954, 1),
+                                "t" : NumberLong(1)
+                        },
+                        "optimeDate" : ISODate("2019-05-18T01:29:14Z"),
+                        "syncingTo" : "",
+                        "syncSourceHost" : "",
+                        "syncSourceId" : -1,
+                        "infoMessage" : "",
+                        "electionTime" : Timestamp(1558142533, 2),
+                        "electionDate" : ISODate("2019-05-18T01:22:13Z"),
+                        "configVersion" : 1,
+                        "self" : true,
+                        "lastHeartbeatMessage" : ""
+                }
+        ],
+        "ok" : 1,
+        "operationTime" : Timestamp(1558142954, 1),
+        "$clusterTime" : {
+                "clusterTime" : Timestamp(1558142954, 1),
+                "signature" : {
+                        "hash" : BinData(0,"hBRoJb/8N/78HZhxplUhw9YtIZE="),
+                        "keyId" : NumberLong("6692171226036568066")
+                }
+        }
+}
