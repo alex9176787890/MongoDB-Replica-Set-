@@ -69,9 +69,9 @@ docker volume create --name mongo_storage
 
 ````
 docker run --name mongoNode1 \
-> -v mongo_storage:/data \
-> -d mongo \
-> --smallfiles
+-v mongo_storage:/data \
+-d mongo \
+--smallfiles
 ````
 6. Create the key file.
 The content of the keyfile must be the same for all members of the replica set.
