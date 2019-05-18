@@ -122,3 +122,5 @@ docker run --name mongoNode1 --hostname mongoNode1 \
 --port 27017
 ````
 
+The --env-file reads an env file and sets environment variables inside the container.
+The --add-host flag adds entries into the docker container’s /etc/hosts file so we can use hostnames instead of IP addresses. Here we are mapping our 3 docker-machines that we have created before.
