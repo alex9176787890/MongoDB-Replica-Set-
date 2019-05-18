@@ -21,7 +21,7 @@ export DOCKER_HOST="tcp://192.168.99.100:2376"
 export DOCKER_CERT_PATH="/Users/developer/.docker/machine/machines/manager1"  
 export DOCKER_MACHINE_NAME="manager1"  
 
-3. Create the two docker-machines as worker
+3. Create the other two docker-machines as worker
 
 ````
 docker-machine create -d virtualbox worker1
