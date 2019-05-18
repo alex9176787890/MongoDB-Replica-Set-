@@ -1,6 +1,8 @@
 # MongoDB-Replica-Set-
 Deploy a MongoDB Replica Set using Docker
 
+##  Create three docker-machine
+
 1. Install virtualbox on Mac
 
 2. Create a machine called manager1 using virtualbox as the virtualization provider
@@ -51,7 +53,15 @@ worker2    -        virtualbox   Running   tcp://192.168.99.102:2376           v
 
 Attached our volume created to start our first mongo container and set the configurations.  
 
-4. Configuration of master node of MongoDB
+## Start the mongodb configuration, 
+
+4. Position in the first machine to run the next command:
+
+````
+eval `docker-machine env manager1`
+````
+
+5. Configuration of master node of MongoDB
 
 ````
 docker volume create --name mongo_storage
@@ -63,11 +73,17 @@ docker run --name mongoNode1 \
 > -d mongo \
 > --smallfiles
 ````
-5. Create the key file.
+6. Create the key file.
 The content of the keyfile must be the same for all members of the replica set.
 
 ````
 openssl rand -base64 741 > mongo-keyfile
 chmod 600 mongo-keyfile
 ````
+
+7. Create the folders where is going to hold the data, keyfile and configurations inside the mongo_storage volume
+````
+docker exec mongoNode1 bash -c 'mkdir /data/keyfile /data/admin'
+````
+
 
