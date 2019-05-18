@@ -138,3 +138,9 @@ Implicit session: session { "id" : UUID("508f507e-5f28-4395-88c6-d5a1b54faa7a") 
 MongoDB server version: 4.0.9
 { "ok" : 1 }
 bye
+
+15. Create the admin users with the following command
+````
+docker exec mongoNode1 bash -c 'mongo < /data/admin/admin.js'
+````
+
