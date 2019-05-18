@@ -127,3 +127,14 @@ docker run --name mongoNode1 --hostname mongoNode1 \
 --keyFile this flag is for telling mongo where is the mongo-keyfile.  
 --replSet this flag is for setting the name of the replica set.  
 --storageEngine this flag is for setting the engine of the mongoDB  
+
+14. Start the replica set
+````
+docker exec mongoNode1 bash -c 'mongo < /data/admin/replica.js'
+````
+MongoDB shell version v4.0.9
+connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("508f507e-5f28-4395-88c6-d5a1b54faa7a") }
+MongoDB server version: 4.0.9
+{ "ok" : 1 }
+bye
