@@ -147,23 +147,23 @@ MongoDB shell version v4.0.9connecting to: mongodb://127.0.0.1:27017/?gssapiServ
 Implicit session: session { "id" : UUID("1572d671-6595-4e7f-995e-16f93287a8ee") }
 MongoDB server version: 4.0.9
 admin
-Successfully added user: {
-        "user" : "admin",
-        "roles" : [
-                {
-                        "role" : "userAdminAnyDatabase",
+Successfully added user: {  
+        "user" : "admin",  
+        "roles" : [  
+                {  
+                        "role" : "userAdminAnyDatabase",  
                         "db" : "admin"
-                }
-        ]
-}
-1
-Successfully added user: {
-        "user" : "replicaAdmin",
-        "roles" : [
-                {
-                        "role" : "clusterAdmin",
-                        "db" : "admin"
-                }
-        ]
-}
-bye
+                }  
+        ]  
+}  
+1  
+Successfully added user: {  
+        "user" : "replicaAdmin",  
+        "roles" : [  
+                {  
+                        "role" : "clusterAdmin",  
+                        "db" : "admin"  
+                }  
+        ]  
+}  
+bye  
