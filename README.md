@@ -250,4 +250,6 @@ bash < create-replica-set.sh
 ````
 
 18. Remvoing all containers and docker volume from docke-machine
-reset-docker-machines.sh
+````
+bash < reset-docker-machines.sh
+````
